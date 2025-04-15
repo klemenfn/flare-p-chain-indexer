@@ -24,12 +24,11 @@ jobs:
     - name: gofmt check
       run: ./gofmt-check.sh
 
-#    - name: golangci-lint
-#      uses: golangci/golangci-lint-action@v7
-#      with:
-#        version: latest
-#        args: --timeout 15m0s
-
+    - name: golangci-lint
+      uses: golangci/golangci-lint-action@v7
+      with:
+        version: v2.0
+        
     - name: Build executables
       run: go build ./...
 
