@@ -28,6 +28,7 @@ jobs:
       uses: golangci/golangci-lint-action@v7
       with:
         version: v2.0
+        args: -v
         
     - name: Build executables
       run: go build ./...
